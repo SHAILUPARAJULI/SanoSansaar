@@ -74,7 +74,16 @@ const Navbar = () => {
           <img width="60px" src={logo} alt="" />
         </Link>
 
-        <h3 style={{ marginRight: "10px", marginLeft: "10px" }}>
+        <h3
+          href="#"
+          onClick={toggleNav}
+          style={{
+            cursor: "pointer",
+            marginRight: "10px",
+            marginLeft: "10px",
+            marginTop: "3%",
+          }}
+        >
           ALL ABOUT PETS
         </h3>
         <h3
@@ -85,6 +94,7 @@ const Navbar = () => {
             width: "30px",
             fontSize: "20px",
             fontWeight: "bolder",
+            marginTop: "3%",
           }}
         >
           {" "}
@@ -101,9 +111,9 @@ const Navbar = () => {
           alignItems: "center",
         }}
       >
-        <h3>
-          <AiFillHeart style={{ fontSize: "28px" }} />
-        </h3>
+        {/* <h3>
+          <AiFillHeart style={{ fontSize: "50px" }} />
+        </h3> */}
 
         {AuthLogin ? (
           <Box w="60%">
@@ -189,13 +199,13 @@ const Navbar = () => {
                   <Link to="/AboutPetfinder">
                     <MenuItem bgColor="#6504b5">About SanoSansaar</MenuItem>
                   </Link>
-                  <Link to="/AdoptingPets">
+                  {/* <Link to="/AdoptingPets">
                     <MenuItem bgColor="#6504b5">Adopting Pets</MenuItem>
-                  </Link>
-                  <MenuItem bgColor="#6504b5">
+                  </Link> */}
+                  {/* <MenuItem bgColor="#6504b5">
                     Animals Shelter & Rescues
                   </MenuItem>
-                  <MenuItem bgColor="#6504b5">Petfinder Foundation</MenuItem>
+                  <MenuItem bgColor="#6504b5">Petfinder Foundation</MenuItem> */}
                 </MenuList>
               </Menu>
             </li>
@@ -208,14 +218,14 @@ const Navbar = () => {
                   <Link to="/dogadopt">
                     <MenuItem bgColor="#6504b5">Dog Adoption</MenuItem>
                   </Link>
-                  <MenuItem bgColor="#6504b5">Dog Breeds</MenuItem>
+                  {/* <MenuItem bgColor="#6504b5">Dog Breeds</MenuItem>
                   <Link to="/FeedingDog">
                     <MenuItem bgColor="#6504b5">Feeding your Dog</MenuItem>
                   </Link>
                   <MenuItem bgColor="#6504b5">Dog Behavior</MenuItem>
                   <MenuItem bgColor="#6504b5">Dog Health & Wellness</MenuItem>
                   <MenuItem bgColor="#6504b5">Dog Training</MenuItem>
-                  <MenuItem bgColor="#6504b5">Other Dog Information</MenuItem>
+                  <MenuItem bgColor="#6504b5">Other Dog Information</MenuItem> */}
                 </MenuList>
               </Menu>
             </li>
@@ -228,14 +238,14 @@ const Navbar = () => {
                   <Link to="/catadopt">
                     <MenuItem bgColor="#6504b5">Cat Adoption</MenuItem>
                   </Link>
-                  <MenuItem bgColor="#6504b5">Cat Breeds</MenuItem>
+                  {/* <MenuItem bgColor="#6504b5">Cat Breeds</MenuItem>
                   <Link to="/FeedingCat">
                     <MenuItem bgColor="#6504b5">Feeding your Cat</MenuItem>
                   </Link>
                   <MenuItem bgColor="#6504b5">Cat Behavior</MenuItem>
                   <MenuItem bgColor="#6504b5">Cat Health & Wellness</MenuItem>
                   <MenuItem bgColor="#6504b5">Cat Training</MenuItem>
-                  <MenuItem bgColor="#6504b5">Other Cat Information</MenuItem>
+                  <MenuItem bgColor="#6504b5">Other Cat Information</MenuItem> */}
                 </MenuList>
               </Menu>
             </li>
@@ -256,20 +266,13 @@ const Navbar = () => {
               </Menu>
             </li>
             <li>
-              <Menu>
+              {/* <Menu>
                 <Link to="/ContributionForm">
                   <MenuButton as={Text} isLazy={true} color="#fff">
                     CONTRIBUTION
                   </MenuButton>
                 </Link>
-                {/* <MenuList color='#fff' bg="#7E5A9B">
-    <MenuItem>Download</MenuItem>
-    <MenuItem>Create a Copy</MenuItem>
-    <MenuItem>Mark as Draft</MenuItem>
-    <MenuItem>Delete</MenuItem>
-    <MenuItem>Attend a Workshop</MenuItem>
-  </MenuList> */}
-              </Menu>
+              </Menu> */}
             </li>
           </ul>
         </div>

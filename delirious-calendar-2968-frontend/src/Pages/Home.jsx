@@ -3,7 +3,6 @@ import React from "react";
 import one from "../Images/1.png";
 import two from "../Images/2.png";
 import three from "../Images/3.png";
-import four from "../Images/4.png";
 import homepic from "../image/homepage.avif";
 import { Link } from "react-router-dom";
 const Home = () => {
@@ -18,7 +17,7 @@ const Home = () => {
             alt=""
             style={{ position: "absolute", top: 0, left: 0, zIndex: -1 }}
           />
-          <div
+          {/* <div
             style={{
               display: "flex",
               justifyContent: "center",
@@ -51,7 +50,7 @@ const Home = () => {
                 width={500}
               ></Input>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <Heading
@@ -61,7 +60,7 @@ const Home = () => {
           p={"20px 300px"}
           padding={"10% 0 11% 0"}
           color="white"
-          textShadow="1px 1px 2px #000, 0 0 1em #000" // Add textShadow property for stroke
+          textShadow="1px 1px 2px #000, 0 0 1em #000"
         >
           Connecting Hearts and Homes: Where Pets Find Their Perfect Match!
         </Heading>
@@ -75,7 +74,6 @@ const Home = () => {
             <Stack
               direction={{ ms: "column", md: "row" }}
               justifyContent={"space-evenly"}
-              gap={"50px"}
             >
               <Box boxSize={150} p={1}>
                 <Link to={"/dogadopt"}>
@@ -97,17 +95,14 @@ const Home = () => {
                 </Link>
               </Box>
               <Box boxSize={160} p={1}>
-                <img
-                  src={three}
-                  alt="3"
-                  style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
-                />
-              </Box>
-              <Box boxSize={160} p={1}>
-                <img
-                  src={four}
-                  alt="4"
-                  style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
+                <Link to={"/otheradopt"}>
+                  <img
+                    src={three}
+                    alt="3"
+                    s
+                    style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
+                  />
+                </Link>
                 />
               </Box>
             </Stack>
@@ -116,7 +111,7 @@ const Home = () => {
       </Box>
       <Box bg={"#EDE7F6"}>
         <Heading color={"#6504b5"} p={"5% 20%"}>
-          Pets Available for Adoption Nearby
+          Pets That Have Already Found A Perfect Home
         </Heading>
         <Stack
           direction={{ base: "column", md: "row" }}
@@ -147,6 +142,7 @@ const Home = () => {
             >
               Boo
             </Heading>
+            <p>hello my name is boo and i already found my perfect home</p>
             {/* <h2>Boo</h2> */}
           </Box>
           <Box>
@@ -168,6 +164,7 @@ const Home = () => {
             >
               Rallo
             </Heading>
+            <p>hello my name is boo and i already found my perfect home</p>
           </Box>
           <Box>
             <img
@@ -188,6 +185,7 @@ const Home = () => {
             >
               Bravo
             </Heading>
+            <p>hello my name is boo and i already found my perfect home</p>
           </Box>
           <Box>
             <img
@@ -208,6 +206,7 @@ const Home = () => {
             >
               Tullo
             </Heading>
+            <p>hello my name is boo and i already found my perfect home</p>
           </Box>
         </Stack>
       </Box>
@@ -251,32 +250,6 @@ const Home = () => {
                 Learn More
               </a>
             </Button>
-          </Box>
-          <Box w={400}>
-            <Heading
-              color={"#004c81"}
-              fontSize={"20px"}
-              pt={10}
-              fontFamily={"Nexa-Bold"}
-              fontWeight={400}
-            >
-              COVID-19 Resources
-            </Heading>
-            <Text>
-              Get the latest on adoption processes, learn how local shelters and
-              rescue groups are adapting and find out what you can do to help
-              dogs and cats in need right now.
-            </Text>
-            <Button
-              m={10}
-              bg={"white"}
-              border={"2px solid #20ccf8"}
-              color="#004c81"
-              borderRadius={"12rem"}
-            >
-              Learn More
-            </Button>
-            {/* <Button m={10} >Learn More</Button> */}
           </Box>
           <Box w={300}>
             <Heading
