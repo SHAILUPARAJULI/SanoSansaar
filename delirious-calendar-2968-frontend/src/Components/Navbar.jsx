@@ -249,7 +249,7 @@ const Navbar = () => {
                 </MenuList>
               </Menu>
             </li>
-            <li>
+            {/* <li>
               <Menu>
                 <MenuButton as={Text} isLazy={true} color="#fff">
                   OTHER TYPES OF PETS
@@ -264,7 +264,7 @@ const Navbar = () => {
                   <MenuItem bgColor="#6504b5">Small & Furry Pets</MenuItem>
                 </MenuList>
               </Menu>
-            </li>
+            </li> */}
             <li>
               {/* <Menu>
                 <Link to="/ContributionForm">

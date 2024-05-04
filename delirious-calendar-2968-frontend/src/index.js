@@ -10,23 +10,23 @@ import { Store } from './Redux/store';
 import { AdminAuthContext } from './context/AdminAuthContext';
 import { AuthContext } from './context/AuthContext';
 // import { store } from './Redux/store';
-document.title="Pet-Connect"
+document.title = "Pet-Connect"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider>
     <BrowserRouter>
-    <AuthContext>
-    <AdminAuthContext>
-      <Provider store={Store}>
-        <App />
-      </Provider>
-    </AdminAuthContext>
-    </AuthContext>
+      <AuthContext>
+        <AdminAuthContext>
+          <Provider store={Store}>
+            <App />
+          </Provider>
+        </AdminAuthContext>
+      </AuthContext>
     </BrowserRouter>
-</ChakraProvider>
+  </ChakraProvider>
 );
-  
+
 
 
 // If you want to start measuring performance in your app, pass a function

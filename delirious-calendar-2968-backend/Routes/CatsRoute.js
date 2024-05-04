@@ -95,7 +95,7 @@ catsRoute.patch("/patch/:id", async(req,res)=>{
 
         const updatedcats = await CatsModel.findByIdAndUpdate(id, req.body)
 
-        res.json({message:"Updated cats"})
+        res.json({message:"Updated cats", data: updatedcats})
         
     } catch (error) {
         res.status(500).json({error:"Internal Server Error"})
