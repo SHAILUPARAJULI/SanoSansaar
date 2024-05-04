@@ -94,7 +94,7 @@ const Home = () => {
                   />
                 </Link>
               </Box>
-              <Box boxSize={160} p={1}>
+              {/* <Box boxSize={160} p={1}>
                 <Link to={"/otheradopt"}>
                   <img
                     src={three}
@@ -103,7 +103,7 @@ const Home = () => {
                     style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
                   />
                 </Link>
-              </Box>
+              </Box> */}
             </Stack>
           </Box>
         </Box>
@@ -218,7 +218,7 @@ const Home = () => {
           //  font-size: 30px;
           //  font-weight: 400;
           color="#4d4751"
-          //  margin-bottom: 40px;
+        //  margin-bottom: 40px;
         >
           Planning to Adopt a Pet?
         </Heading>

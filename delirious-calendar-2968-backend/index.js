@@ -6,6 +6,7 @@ const cors = require("cors");
 const adminRoute = require('./Routes/adminRoute');
 const dogsRoute = require('./Routes/DogsRoute');
 const catsRoute = require('./Routes/CatsRoute');
+const othersRoute = require('./Routes/OtherRoute');
 const { postRouter } = require('./Routes/postRoute');
 
 const app = express()
@@ -22,7 +23,9 @@ app.use("/dogs", dogsRoute)
 
 app.use("/cats", catsRoute)
 
-app.use("/post",postRouter)
+app.use("/others", othersRoute)
+
+app.use("/post", postRouter)
 
 
 
@@ -33,7 +36,7 @@ app.use("/post",postRouter)
 //     console.log(`connect to port ${process.env.LOCAL_PORT}`)
 
 // })
-app.listen(8080, connectToServer(), ()=>{
+app.listen(8080, connectToServer(), () => {
 
     console.log(`connect to port 8080`)
 

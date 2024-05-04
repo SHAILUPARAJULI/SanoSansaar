@@ -1,10 +1,10 @@
 const express = require('express');
-const DogsModel = require('../Model/DogModel');
+const OthersModel = require('../Model/OtherModel');
 
-const dogsRoute = express.Router()
+const OtherRoute = express.Router()
 
 
-dogsRoute.get("/get", async (req, res) => {
+OtherRoute.get("/get", async (req, res) => {
   try {
     const { q, name, age, breed, sortBy, sortOrder, page, limit } = req.query;
 
@@ -41,29 +41,29 @@ dogsRoute.get("/get", async (req, res) => {
     const pageSize = parseInt(limit) || 10;
     const skip = (pageNumber - 1) * pageSize;
 
-    // Fetch dogs data with applied filters, sort, and pagination
-    const dogsData = await DogsModel.find(filter)
+    // Fetch Other data with applied filters, sort, and pagination
+    const OtherData = await OthersModel.find(filter)
       .sort(sort)
       .skip(skip)
       .limit(pageSize);
 
-    // Calculate total count of dogs matching the filters
-    const totalDogsCount = await DogsModel.countDocuments(filter);
+    // Calculate total count of Other matching the filters
+    const totalOthersCount = await OthersModel.countDocuments(filter);
 
-    res.json({ dogs: dogsData, totalCount: totalDogsCount });
+    res.json({ Other: OtherData, totalCount: totalOthersCount });
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
 
-dogsRoute.get("/get/:id", async (req, res) => {
+OtherRoute.get("/get/:id", async (req, res) => {
 
   try {
 
     const { id } = req.params
 
-    const dog = await DogsModel.findById(id)
+    const dog = await OthersModel.findById(id)
 
     res.json({ dog: dog })
 
@@ -75,15 +75,15 @@ dogsRoute.get("/get/:id", async (req, res) => {
 
 
 // admin side
-dogsRoute.post("/add", async (req, res) => {
+OtherRoute.post("/add", async (req, res) => {
 
   try {
 
-    const updatedDogs = DogsModel(req.body)
+    const updatedOthers = OthersModel(req.body)
 
-    await updatedDogs.save()
+    await updatedOthers.save()
 
-    res.json({ updatedDogs: updatedDogs })
+    res.json({ updatedOthers: updatedOthers })
 
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" })
@@ -92,15 +92,15 @@ dogsRoute.post("/add", async (req, res) => {
 })
 
 // admin side
-dogsRoute.patch("/patch/:id", async (req, res) => {
+OtherRoute.patch("/patch/:id", async (req, res) => {
 
   try {
 
     const { id } = req.params
 
-    const upatedDogsData = await DogsModel.findByIdAndUpdate(id, req.body)
+    const upatedOthersData = await OthersModel.findByIdAndUpdate(id, req.body)
 
-    res.json({ message: "Updated Dogs", data: upatedDogsData })
+    res.json({ message: "Updated Others", data: upatedOthersData })
 
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" })
@@ -109,15 +109,15 @@ dogsRoute.patch("/patch/:id", async (req, res) => {
 })
 
 // admin side
-dogsRoute.delete("/delete/:id", async (req, res) => {
+OtherRoute.delete("/delete/:id", async (req, res) => {
 
   try {
 
     const { id } = req.params
 
-    const upatedDogsData = await DogsModel.findByIdAndDelete(id)
+    const upatedOthersData = await OthersModel.findByIdAndDelete(id)
 
-    res.json({ message: "Deleted Dogs", data: upatedDogsData })
+    res.json({ message: "Deleted Others", data: upatedOthersData })
 
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" })
@@ -128,4 +128,4 @@ dogsRoute.delete("/delete/:id", async (req, res) => {
 
 
 
-module.exports = dogsRoute
+module.exports = OtherRoute

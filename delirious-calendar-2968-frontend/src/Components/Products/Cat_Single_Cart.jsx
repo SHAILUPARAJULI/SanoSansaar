@@ -1,58 +1,58 @@
 import {
-    Heading,
-    Box,
-    Center,
-    Image,
-    Text,
-    Stack,
-    Button,
-    useColorModeValue,
-  } from '@chakra-ui/react';
+  Heading,
+  Box,
+  Center,
+  Image,
+  Text,
+  Stack,
+  Button,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-  
-  export  function ProductAddToCart({image_url,_id,id,cat_name,age ,breed ,gender, adoption_fee, location}) {
-    return (
-      <Center py={6}>
-        <Box
-          maxW={'270px'}
+
+export function ProductAddToCart({ image_url, _id, id, cat_name, age, breed, gender, adoption_fee, location }) {
+  return (
+    <Center py={6}>
+      <Box
+        maxW={'270px'}
+        w={'full'}
+        bg={useColorModeValue('white', 'gray.800')}
+        boxShadow={'2xl'}
+        rounded={'md'}
+        overflow={'hidden'}>
+        <Image
+          h={'220px'}
           w={'full'}
-          bg={useColorModeValue('white', 'gray.800')}
-          boxShadow={'2xl'}
-          rounded={'md'}
-          overflow={'hidden'}>
-          <Image
-            h={'220px'}
-            w={'full'}
-            src={
-                image_url
-            }
-            objectFit={'cover'}
-          />
-         
-  
-          <Box p={6}>
-            <Stack spacing={0} align={'center'} mb={5}>
-              <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                {cat_name}
-              </Heading>
-              <Text color={'gray.500'}>{breed}</Text>
+          src={
+            image_url
+          }
+          objectFit={'cover'}
+        />
+
+
+        <Box p={6}>
+          <Stack spacing={0} align={'center'} mb={5}>
+            <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+              {cat_name}
+            </Heading>
+            <Text color={'gray.500'}>{breed}</Text>
+          </Stack>
+
+          <Stack direction={'row'} justify={'center'} spacing={6}>
+            <Stack spacing={0} align={'center'}>
+              <Text fontWeight={600}>{age} yr</Text>
+              <Text fontSize={'sm'} color={'gray.500'}>
+                Age
+              </Text>
             </Stack>
-  
-            <Stack direction={'row'} justify={'center'} spacing={6}>
-              <Stack spacing={0} align={'center'}>
-                <Text fontWeight={600}>{age} yr</Text>
-                <Text fontSize={'sm'} color={'gray.500'}>
-                  Age
-                </Text>
-              </Stack>
-              <Stack spacing={0} align={'center'}>
-                <Text fontWeight={600}>{gender}</Text>
-                <Text fontSize={'sm'} color={'gray.500'}>
-                  Gender
-                </Text>
-              </Stack>
+            <Stack spacing={0} align={'center'}>
+              <Text fontWeight={600}>{gender}</Text>
+              <Text fontSize={'sm'} color={'gray.500'}>
+                Gender
+              </Text>
             </Stack>
-            <Link to={`/SingleCatPage/${_id}`}>
+          </Stack>
+          <Link to={`/SingleCatPage/${_id}`}>
             <Button
               w={'full'}
               mt={8}
@@ -65,9 +65,9 @@ import { Link } from 'react-router-dom';
               }}>
               Know More
             </Button>
-            </Link>
-          </Box>
+          </Link>
         </Box>
-      </Center>
-    );
-  }
+      </Box>
+    </Center>
+  );
+}
