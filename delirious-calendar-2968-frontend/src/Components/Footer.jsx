@@ -3,16 +3,12 @@ import {
   Box,
   Container,
   Stack,
-  SimpleGrid,
   Text,
-  Link,
-  VisuallyHidden,
   chakra,
   useColorModeValue,
-  Image,
-  Button,
+  VisuallyHidden, // Import VisuallyHidden
 } from "@chakra-ui/react";
-import five from "../Images/fo.png";
+import "./Footer.css"; // Import CSS file
 
 import {
   FaTwitter,
@@ -33,37 +29,23 @@ const ListHeader = ({ children }) => {
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={9}
-      h={8}
-      cursor={"pointer"}
+      className="social-button" // Apply CSS class
       as={"a"}
       href={href}
       display={"inline-flex"}
       alignItems={"center"}
       justifyContent={"center"}
-      transition={"background 0.3s ease"}
-      _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-      }}
     >
-      <VisuallyHidden>{label}</VisuallyHidden>
+      <VisuallyHidden>{label}</VisuallyHidden> {/* Use VisuallyHidden */}
       {children}
     </chakra.button>
   );
 };
+
 const Footer = () => {
   return (
-    <Box
-      bg={useColorModeValue("#6504b5", "gray.900")}
-      color={useColorModeValue("#ffffff", "gray.200")}
-    >
-      <Box
-        borderTopWidth={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.700")}
-      >
+    <Box className="footer">
+      <Box className="footer-container">
         <Container
           as={Stack}
           maxW={"6xl"}
