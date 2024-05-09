@@ -1,0 +1,27 @@
+.footer {
+  background-color: #6504b5;
+  color: #ffffff;
+  margin-top: auto;
+}
+
+.footer-container {
+  border-top-width: 1px;
+  border-style: solid;
+  border-color: #cbd5e0;
+}
+
+.social-button {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  width: 2.25rem;
+  height: 2.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.social-button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}

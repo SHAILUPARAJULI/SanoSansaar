@@ -1,54 +1,52 @@
-
-.dogadopt{
-    width:100%;
-    display: flex;
-    margin: auto;
-    
-}
-.dogsidebar{
-    /* border:2px solid red; */
-    width:25%;
-    margin-top: 50px;
-    /* margin: auto; */
-    
-
-}
-.singledogcard h3{
-    color: #6504b5;
-
-}
-.singledogcard button{
-   border: 1px solid #6504b5;
-   color: #6504b5;
-   
-}
-.dogsproduct{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 15px;
-    /* border:2px solid blue; */
-    width:75%;
-    margin-top: 102px;
+.dogadopt {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: flex-start; /* Align items to the top */
 }
 
-.singledogcard{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: 2px solid #6504b5;
-    padding: 10px;
+.dogsidebar {
+  /* No need for styling as the sidebar is removed */
+  display: none;
 }
-.singledogcard:hover{
-    border: 3px solid #af67eb;
+
+.singledogcard h3 {
+  color: #6504b5;
 }
+
+.singledogcard button {
+  border: 1px solid #6504b5;
+  color: #6504b5;
+}
+
+.dogsproduct {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Responsive grid with minimum column width of 250px */
+  gap: 15px;
+  width: 75%; /* Adjust width if necessary */
+  margin-top: 102px;
+  justify-content: center; /* Center the content horizontally */
+}
+
+.singledogcard {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 2px solid #6504b5;
+  padding: 10px;
+}
+
+.singledogcard:hover {
+  border: 3px solid #af67eb;
+}
+
 .singledogcard > img {
-    width: 100%;
-    height: 200px; 
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.spinner{
-    width:10%;
-    position: absolute;
-    top: 25%;
-    left: 65%;
-    transform: translate(-50%, -50%);
+.spinner {
+  /* Adjust spinner styling if necessary */
 }

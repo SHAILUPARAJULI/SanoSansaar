@@ -15,14 +15,13 @@ import Home from "./Pages/Home";
 import Login from "./Components/Login";
 
 function App() {
-   return (
-      <div className="App">
-
-      <Navbar/>
-          <AllRoutes/>
-         <Footer />
-      </div>
-   );
+  return (
+    <div className="App">
+      <Navbar />
+      <AllRoutes />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

@@ -72,9 +72,9 @@
   cursor: pointer;
   font-size: 24px;
 }
-button:hover{
-   color: #b87ece;
-   text-decoration: underline;
+button:hover {
+  color: #b87ece;
+  text-decoration: underline;
 }
 
 /* Media queries for responsive design */
@@ -105,11 +105,5 @@ button:hover{
 
   .hamburger-icon {
     display: block;
-    
   }
 }
-
-
- /* Navbar.css */
-/* ... existing styles ... */
-
